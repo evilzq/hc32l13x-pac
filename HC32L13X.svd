@@ -30,6 +30,11 @@
                 <size>0xCC</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>ADC_IRQHandler</name>
+                <description>ADC_IRQHandler</description>
+                <value>40</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -1695,6 +1700,11 @@
                 <size>0x400</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM4_IRQHandler</name>
+                <description>ADTIM4_IRQHandler</description>
+                <value>34</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CNTER</name>
@@ -4512,6 +4522,11 @@
                 <size>0x400</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM5_IRQHandler</name>
+                <description>ADTIM5_IRQHandler</description>
+                <value>35</value>
+            </interrupt>
         </peripheral>
         <peripheral derivedFrom="ADTIM4">
             <name>ADTIM6</name>
@@ -4522,6 +4537,11 @@
                 <size>0x400</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM6_IRQHandler</name>
+                <description>ADTIM6_IRQHandler</description>
+                <value>36</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>AES</name>
@@ -4765,6 +4785,11 @@
                 <size>0x1C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>CLK_TRIM_IRQHandler</name>
+                <description>CLK_TRIM_IRQHandler</description>
+                <value>47</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -5188,6 +5213,11 @@
                 <size>0x30</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>DMAC_IRQHandler</name>
+                <description>DMAC_IRQHandler</description>
+                <value>20</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CONF</name>
@@ -5593,6 +5623,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>FLASH_RAM_IRQHandler</name>
+                <description>FALSH_RAM_IRQHandler</description>
+                <value>46</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>TNVS</name>
@@ -5965,6 +6000,26 @@
                 <size>0x800</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>PORTA_IRQHandler</name>
+                <description>PORTA_IRQHandler</description>
+                <value>16</value>
+            </interrupt>
+            <interrupt>
+                <name>PORTB_IRQHandler</name>
+                <description>PORTB_IRQHandler</description>
+                <value>17</value>
+            </interrupt>
+            <interrupt>
+                <name>PORTC_IRQHandler</name>
+                <description>PORTC_IRQHandler</description>
+                <value>18</value>
+            </interrupt>
+            <interrupt>
+                <name>PORTD_IRQHandler</name>
+                <description>PORTD_IRQHandler</description>
+                <value>19</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>PA00_SEL</name>
@@ -15336,6 +15391,11 @@
                 <size>0x18</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>I2C0_IRQHandler</name>
+                <description>I2C0_IRQHandler</description>
+                <value>28</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>TMRUN</name>
@@ -15540,6 +15600,11 @@
                 <size>0x18</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>I2C1_IRQHandler</name>
+                <description>I2C1_IRQHandler</description>
+                <value>29</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>LCD</name>
@@ -15550,6 +15615,11 @@
                 <size>0x80</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>LCD_IRQHandler</name>
+                <description>LCD_IRQHandler</description>
+                <value>45</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -18474,6 +18544,11 @@
                 <size>0x18</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>LPTIMER_IRQHandler</name>
+                <description>LPTIMER_IRQHandler</description>
+                <value>33</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CNT</name>
@@ -18667,6 +18742,11 @@
                 <size>0x1C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>LPUART0_IRQHandler</name>
+                <description>LPUART0_IRQHandler</description>
+                <value>24</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>SBUF</name>
@@ -19043,6 +19123,11 @@
                 <size>0x1C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>LPUART1_IRQHandler</name>
+                <description>LPUART1_IRQHandler</description>
+                <value>25</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>LVD</name>
@@ -19054,6 +19139,11 @@
                 <size>0x30</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>LVD_IRQHandler</name>
+                <description>LVD_IRQHandler</description>
+                <value>44</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -19509,6 +19599,11 @@
                 <size>0x6C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>PCA_IRQHandler</name>
+                <description>PCA_IRQHandler</description>
+                <value>37</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CCON</name>
@@ -20532,6 +20627,11 @@
                 <size>0x38</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>PCNT_IRQHandler</name>
+                <description>PCNT_IRQHandler</description>
+                <value>41</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>RUN</name>
@@ -21498,6 +21598,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>RTC_IRQHandler</name>
+                <description>RTC_IRQHandler</description>
+                <value>39</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -21975,6 +22080,11 @@
                 <size>0x18</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>SPI0_IRQHandler</name>
+                <description>SPI0_IRQHandler</description>
+                <value>26</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -22242,6 +22352,11 @@
                 <size>0x18</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>SPI1_IRQHandler</name>
+                <description>SPI1_IRQHandler</description>
+                <value>27</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>SYSCTRL</name>
@@ -22895,6 +23010,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>TIM0_IRQHandler</name>
+                <description>TIM0_IRQHandler</description>
+                <value>30</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>ARR</name>
@@ -24288,6 +24408,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>TIM1_IRQHandler</name>
+                <description>TIM1_IRQHandler</description>
+                <value>31</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>ARR</name>
@@ -25681,6 +25806,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>TIM2_IRQHandler</name>
+                <description>TIM2_IRQHandler</description>
+                <value>32</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>ARR</name>
@@ -27074,6 +27204,11 @@
                 <size>0x34</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>TIM3_IRQHandler</name>
+                <description>TIM3_IRQHandler</description>
+                <value>21</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>ARR</name>
@@ -29100,6 +29235,11 @@
                 <size>0x1C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>UART0_IRQHandler</name>
+                <description>UART0_IRQHandler</description>
+                <value>22</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>SBUF</name>
@@ -29469,6 +29609,11 @@
                 <size>0x1C</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>UART1_IRQHandler</name>
+                <description>UART1_IRQHandler</description>
+                <value>23</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>VC</name>
@@ -29480,6 +29625,16 @@
                 <size>0x28</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>VC0_IRQHandler</name>
+                <description>VC0_IRQHandler</description>
+                <value>42</value>
+            </interrupt>
+            <interrupt>
+                <name>VC1_IRQHandler</name>
+                <description>VC1_IRQHandler</description>
+                <value>43</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -29986,6 +30141,11 @@
                 <size>0x88</size>
                 <usage>registers</usage>
             </addressBlock>
+            <interrupt>
+                <name>WDT_IRQHandler</name>
+                <description>WDT_IRQHandler</description>
+                <value>38</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>RST</name>

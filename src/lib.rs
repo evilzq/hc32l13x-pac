@@ -33,7 +33,40 @@ use generic::*;
 #[doc = r"Common register and bit access and modify traits"]
 pub mod generic;
 #[cfg(feature = "rt")]
-extern "C" {}
+extern "C" {
+    fn PORTA_IRQHANDLER();
+    fn PORTB_IRQHANDLER();
+    fn PORTC_IRQHANDLER();
+    fn PORTD_IRQHANDLER();
+    fn DMAC_IRQHANDLER();
+    fn TIM3_IRQHANDLER();
+    fn UART0_IRQHANDLER();
+    fn UART1_IRQHANDLER();
+    fn LPUART0_IRQHANDLER();
+    fn LPUART1_IRQHANDLER();
+    fn SPI0_IRQHANDLER();
+    fn SPI1_IRQHANDLER();
+    fn I2C0_IRQHANDLER();
+    fn I2C1_IRQHANDLER();
+    fn TIM0_IRQHANDLER();
+    fn TIM1_IRQHANDLER();
+    fn TIM2_IRQHANDLER();
+    fn LPTIMER_IRQHANDLER();
+    fn ADTIM4_IRQHANDLER();
+    fn ADTIM5_IRQHANDLER();
+    fn ADTIM6_IRQHANDLER();
+    fn PCA_IRQHANDLER();
+    fn WDT_IRQHANDLER();
+    fn RTC_IRQHANDLER();
+    fn ADC_IRQHANDLER();
+    fn PCNT_IRQHANDLER();
+    fn VC0_IRQHANDLER();
+    fn VC1_IRQHANDLER();
+    fn LVD_IRQHANDLER();
+    fn LCD_IRQHANDLER();
+    fn FLASH_RAM_IRQHANDLER();
+    fn CLK_TRIM_IRQHANDLER();
+}
 #[doc(hidden)]
 pub union Vector {
     _handler: unsafe extern "C" fn(),
@@ -43,14 +76,193 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 0] = [];
+pub static __INTERRUPTS: [Vector; 48] = [
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: PORTA_IRQHANDLER,
+    },
+    Vector {
+        _handler: PORTB_IRQHANDLER,
+    },
+    Vector {
+        _handler: PORTC_IRQHANDLER,
+    },
+    Vector {
+        _handler: PORTD_IRQHANDLER,
+    },
+    Vector {
+        _handler: DMAC_IRQHANDLER,
+    },
+    Vector {
+        _handler: TIM3_IRQHANDLER,
+    },
+    Vector {
+        _handler: UART0_IRQHANDLER,
+    },
+    Vector {
+        _handler: UART1_IRQHANDLER,
+    },
+    Vector {
+        _handler: LPUART0_IRQHANDLER,
+    },
+    Vector {
+        _handler: LPUART1_IRQHANDLER,
+    },
+    Vector {
+        _handler: SPI0_IRQHANDLER,
+    },
+    Vector {
+        _handler: SPI1_IRQHANDLER,
+    },
+    Vector {
+        _handler: I2C0_IRQHANDLER,
+    },
+    Vector {
+        _handler: I2C1_IRQHANDLER,
+    },
+    Vector {
+        _handler: TIM0_IRQHANDLER,
+    },
+    Vector {
+        _handler: TIM1_IRQHANDLER,
+    },
+    Vector {
+        _handler: TIM2_IRQHANDLER,
+    },
+    Vector {
+        _handler: LPTIMER_IRQHANDLER,
+    },
+    Vector {
+        _handler: ADTIM4_IRQHANDLER,
+    },
+    Vector {
+        _handler: ADTIM5_IRQHANDLER,
+    },
+    Vector {
+        _handler: ADTIM6_IRQHANDLER,
+    },
+    Vector {
+        _handler: PCA_IRQHANDLER,
+    },
+    Vector {
+        _handler: WDT_IRQHANDLER,
+    },
+    Vector {
+        _handler: RTC_IRQHANDLER,
+    },
+    Vector {
+        _handler: ADC_IRQHANDLER,
+    },
+    Vector {
+        _handler: PCNT_IRQHANDLER,
+    },
+    Vector {
+        _handler: VC0_IRQHANDLER,
+    },
+    Vector {
+        _handler: VC1_IRQHANDLER,
+    },
+    Vector {
+        _handler: LVD_IRQHANDLER,
+    },
+    Vector {
+        _handler: LCD_IRQHANDLER,
+    },
+    Vector {
+        _handler: FLASH_RAM_IRQHANDLER,
+    },
+    Vector {
+        _handler: CLK_TRIM_IRQHANDLER,
+    },
+];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
-pub enum Interrupt {}
+#[repr(u16)]
+pub enum Interrupt {
+    #[doc = "16 - PORTA_IRQHandler"]
+    PORTA_IRQHANDLER = 16,
+    #[doc = "17 - PORTB_IRQHandler"]
+    PORTB_IRQHANDLER = 17,
+    #[doc = "18 - PORTC_IRQHandler"]
+    PORTC_IRQHANDLER = 18,
+    #[doc = "19 - PORTD_IRQHandler"]
+    PORTD_IRQHANDLER = 19,
+    #[doc = "20 - DMAC_IRQHandler"]
+    DMAC_IRQHANDLER = 20,
+    #[doc = "21 - TIM3_IRQHandler"]
+    TIM3_IRQHANDLER = 21,
+    #[doc = "22 - UART0_IRQHandler"]
+    UART0_IRQHANDLER = 22,
+    #[doc = "23 - UART1_IRQHandler"]
+    UART1_IRQHANDLER = 23,
+    #[doc = "24 - LPUART0_IRQHandler"]
+    LPUART0_IRQHANDLER = 24,
+    #[doc = "25 - LPUART1_IRQHandler"]
+    LPUART1_IRQHANDLER = 25,
+    #[doc = "26 - SPI0_IRQHandler"]
+    SPI0_IRQHANDLER = 26,
+    #[doc = "27 - SPI1_IRQHandler"]
+    SPI1_IRQHANDLER = 27,
+    #[doc = "28 - I2C0_IRQHandler"]
+    I2C0_IRQHANDLER = 28,
+    #[doc = "29 - I2C1_IRQHandler"]
+    I2C1_IRQHANDLER = 29,
+    #[doc = "30 - TIM0_IRQHandler"]
+    TIM0_IRQHANDLER = 30,
+    #[doc = "31 - TIM1_IRQHandler"]
+    TIM1_IRQHANDLER = 31,
+    #[doc = "32 - TIM2_IRQHandler"]
+    TIM2_IRQHANDLER = 32,
+    #[doc = "33 - LPTIMER_IRQHandler"]
+    LPTIMER_IRQHANDLER = 33,
+    #[doc = "34 - ADTIM4_IRQHandler"]
+    ADTIM4_IRQHANDLER = 34,
+    #[doc = "35 - ADTIM5_IRQHandler"]
+    ADTIM5_IRQHANDLER = 35,
+    #[doc = "36 - ADTIM6_IRQHandler"]
+    ADTIM6_IRQHANDLER = 36,
+    #[doc = "37 - PCA_IRQHandler"]
+    PCA_IRQHANDLER = 37,
+    #[doc = "38 - WDT_IRQHandler"]
+    WDT_IRQHANDLER = 38,
+    #[doc = "39 - RTC_IRQHandler"]
+    RTC_IRQHANDLER = 39,
+    #[doc = "40 - ADC_IRQHandler"]
+    ADC_IRQHANDLER = 40,
+    #[doc = "41 - PCNT_IRQHandler"]
+    PCNT_IRQHANDLER = 41,
+    #[doc = "42 - VC0_IRQHandler"]
+    VC0_IRQHANDLER = 42,
+    #[doc = "43 - VC1_IRQHandler"]
+    VC1_IRQHANDLER = 43,
+    #[doc = "44 - LVD_IRQHandler"]
+    LVD_IRQHANDLER = 44,
+    #[doc = "45 - LCD_IRQHandler"]
+    LCD_IRQHANDLER = 45,
+    #[doc = "46 - FALSH_RAM_IRQHandler"]
+    FLASH_RAM_IRQHANDLER = 46,
+    #[doc = "47 - CLK_TRIM_IRQHandler"]
+    CLK_TRIM_IRQHANDLER = 47,
+}
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
     fn number(self) -> u16 {
-        match self {}
+        self as u16
     }
 }
 #[doc = "desc ADC"]
